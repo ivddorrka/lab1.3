@@ -1,14 +1,17 @@
 """
 Main module
+githab repo:
+https://github.com/ivddorrka/lab1.3.git
 """
 import math
 
 rules1 = "If you want to enter a number like: √5, then write it this way: sqrt(5)"
 rules2 = "First and second sides should be equal"
 rules3 = "If your number is deciminal write it next way: 4.4 (using dot, not a coma)"
-# print(rules1)
-# print(rules2)
-# print(rules3)
+
+print(rules1)
+print(rules2)
+print(rules3)
 
 def checking_func(a_side):
     """To convert length of a side to float and check whether 
@@ -48,7 +51,6 @@ def user_input():
     b1_side = checking_func(b_side)
     c1_side = checking_func(c_side)
     acc1_count = checking_func(acc_count)
-
     return a1_side, b1_side, c1_side, acc1_count
 
 def height(b_side, c_side):
@@ -56,7 +58,6 @@ def height(b_side, c_side):
     >>> height(10, 12)
     8.0
     """
-
     bh = math.sqrt(b_side**2 - (0.5 * c_side)**2)
     return round(bh, 2)
 # print(height(10, 12))
@@ -73,7 +74,6 @@ def find_km(b_side, c_side):
     return round(square_side, 2)
 # print(find_km(10, 12))
 
-
 def find_side(a_side, b_side, c_side, acc_count):
     """Main function to count the side of a square
     >>> find_side(10, 10, 12, 64.77)
@@ -82,7 +82,6 @@ def find_side(a_side, b_side, c_side, acc_count):
     square_side = find_km(b_side, c_side)
     likti = round(acc_count * square_side, 3)
     return likti
-
 # print(find_side(10, 10, 12, 64.77))
 
 def into_file():
@@ -103,6 +102,6 @@ def into_file():
     return file_here
 # print(into_file())
 
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
+# if __name__ == "__main__":
+#     import doctest
+#     doctest.testmod()
